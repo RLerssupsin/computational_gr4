@@ -1,5 +1,25 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://www.exeter.ac.uk/v8media/recruitmentsites/images/homepage/uoe-logo.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://www.exeter.ac.uk/v8media/recruitmentsites/images/homepage/uoe-logo.svg">
+  <img alt="Exeter university logo." src="https://www.exeter.ac.uk/v8media/recruitmentsites/images/homepage/uoe-logo.svg">
+</picture>
+
 # Computational Group 4 Project 👩‍💻🧑‍💻
 
-### The group project part of Computational_skill module in MSc Health Data Science, University of Exeter
+---
+>The group project part of Computational_skill module in MSc Health Data Science, University of Exeter
+
+<details open>
+<summary> Group's members </summary>
+
+| No. | Name           |    Program     |
+|-----:|---------------|----------------|
+|     1|               |                |
+|     2|               |                |
+|     3|               |                |
+|     4|               |                |
+|     5|Rushanai Lerssupsin               | Genomic medicine (Data Science)               |
+
+</details>
 
 
