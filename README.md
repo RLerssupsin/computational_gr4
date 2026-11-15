@@ -12,13 +12,13 @@
 <details open>
 <summary> Group's members </summary>
 
-| No. | Name           |    Program                           |
-|-----:|---------------|--------------------------------------|
-|     1|Hanafi, Najeebah|MSc Health Data Science              |
-|     2|Jaroenphol, Nuttaporn|MSc Health Data Science         |
-|     3|Rushanai Lerssupsin|Genomic Medicine (Data Science)   |
-|     4|Salem, Farah Salem|Genomic Medicine (Data Science)    |
-|     5|Walker, Tabitha|MSc Health Data Science               |
+| No.  | Name                    |    Program                          |
+|-----:|-------------------------|-------------------------------------|
+|     1|Hanafi Najeebah          |MSc Health Data Science              |
+|     2|Jaroenphol Nuttaporn     |MSc Health Data Science              |
+|     3|Rushanai Lerssupsin      |Genomic Medicine (Data Science)      | 
+|     4|Salem Farah Salem        |Genomic Medicine (Data Science)      |
+|     5|Walker Tabitha           |MSc Health Data Science              |
 
 </details>
 
