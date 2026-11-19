@@ -6,7 +6,7 @@ CREATE TABLE Disease (
     med_id INT UNSIGNED, 
     doctor_id INT,
     FOREIGN KEY (med_id) REFERENCES Medications(med_id),
-    FOREIGN KEY (doctor_id) REFERENCE Doctors(doctor_id)
+    FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)
 ); 
 
 INSERT INTO Disease (disease_id, name, med_id) VALUES 
