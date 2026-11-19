@@ -1,6 +1,6 @@
-USE hospital_database;
+USE hospital_db;
 
-CREATE TABLE hospitals (
+CREATE TABLE Hospitals (
 hospital_id INT unsigned NOT NULL AUTO_INCREMENT,
 name varchar(255) NOT NULL UNIQUE,
 address varchar(255) NOT NULL,
@@ -11,7 +11,7 @@ emergency_services BOOLEAN NOT NULL,
 PRIMARY KEY (hospital_id)
 );
 
-INSERT INTO hospitals (name, address, number_of_beds, hospital_type, accreditation_year, emergency_services) VALUES
+INSERT INTO Hospitals (name, address, number_of_beds, hospital_type, accreditation_year, emergency_services) VALUES
 ('Royal Devon & Exe General Hospital', '24 Barrack Road, Exeter', 740, 'Teaching', 1978, 1), 
 ('St. Jude Infirmary', '118 Victoria Street, Bristol', 580, 'General', 1986, 1), 
 ('Northern Star Community Hospital', '14 Church Lane, York', 145, 'Community', 2011, 0), 
@@ -40,7 +40,8 @@ INSERT INTO hospitals (name, address, number_of_beds, hospital_type, accreditati
 ('Grampian North Trauma Centre', '930 Union Street, Aberdeen', 670, 'Trauma Center', 1987, 1), 
 ('Gower Peninsula Rural Hospital', '44 Gower Road, Swansea', 75, 'Community', 2017, 1), 
 ('Forth Bridge Behavioral Health Centre', '188 Queensferry Road, Edinburgh', 150, 'Psychiatric', 2005, 0), 
-('Midlands Academic Teaching Hospital', '1050 Edgbaston Park Road, Birmingham', 880, 'Teaching', 1975, 1), ('Cheviot Hills Recovery & Rehab', '63 Market Place, Berwick-upon-Tweed', 130, 'Rehabilitation', 2011, 0), 
+('Midlands Academic Teaching Hospital', '1050 Edgbaston Park Road, Birmingham', 880, 'Teaching', 1975, 1), 
+('Cheviot Hills Recovery & Rehab', '63 Market Place, Berwick-upon-Tweed', 130, 'Rehabilitation', 2011, 0), 
 ('Ouse Valley Medical Centre', '412 Bedford Road, Northampton', 375, 'General', 1999, 1), 
 ('Fens & Marsh Community Hospital', '91 Wisbech Road, King’s Lynn', 150, 'Community', 2006, 1), 
 ('Cornish Coast Eye & Ear Infirmary', '54 Lemon Street, Truro', 65, 'Specialty', 2020, 0), 
