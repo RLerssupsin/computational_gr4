@@ -3,7 +3,7 @@ USE hospital_db;
 CREATE TABLE Appointments ( 
     appoint_id INT PRIMARY KEY,
     `date` DATE NOT NULL,
-    'time' TIME NOT NULL, 
+    `time` TIME NOT NULL, 
     patient_id INT NOT NULL, 
     FOREIGN KEY (patient_id) REFERENCES Patients(patient_id) 
 ); 
