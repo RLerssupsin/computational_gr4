@@ -3,11 +3,11 @@ USE hospital_db;
 DROP TABLE IF EXISTS Patients;
 
 CREATE TABLE Patients (
-    patient_id INT PRIMARY KEY,
+    patient_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name       VARCHAR(100),
     DOB        DATE,
     address    VARCHAR(200),
-    doctor_id  INT NOT NULL,
+    doctor_id  INT UNSIGNED NOT NULL,
     CONSTRAINT fk_patients_doctor
         FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)
 );
@@ -617,5 +617,3 @@ INSERT INTO Patients (patient_id, name, DOB, address, doctor_id) VALUES
 (599, 'Marek Popescu', '1991-05-05', '133 Windsor Gardens, Reading, RG5 4DX', 100),
 (600, 'Emeka Boateng', '1976-04-28', '47 High Street, Nottingham, NG6 2EL', 100);
 
---SELECT COUNT(*) FROM Patients;
---SELECT doctor_id, COUNT(*) FROM Patients GROUP BY doctor_id;

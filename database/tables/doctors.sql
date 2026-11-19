@@ -3,11 +3,11 @@ USE hospital_db;
 DROP TABLE IF EXISTS Doctors;
 
 CREATE TABLE Doctors (
-  doctor_id   INT PRIMARY KEY,
+  doctor_id   INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name        VARCHAR(100),
   DOB         DATE,
   address     VARCHAR(200),
-  hospital_id INT NOT NULL
+  hospital_id INT UNSIGNED NOT NULL
 );
 INSERT INTO Doctors (doctor_id, name, DOB, address, hospital_id) VALUES
 (1, 'Dr Amelia Hughes', '1974-03-12', '14 Elm Grove, Bristol, BS6 5LT', 1),

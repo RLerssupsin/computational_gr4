@@ -3,7 +3,7 @@ USE hospital_db;
 DROP TABLE IF EXISTS Medications;
 
 CREATE TABLE Medications (
-    med_id INT PRIMARY KEY,
+    med_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100)
 );
 INSERT INTO Medications (med_id, name) VALUES
@@ -38,4 +38,3 @@ INSERT INTO Medications (med_id, name) VALUES
 (29, 'Solifenacin'),
 (30, 'Olanzapine');
 
--- SELECT * FROM Medications;
