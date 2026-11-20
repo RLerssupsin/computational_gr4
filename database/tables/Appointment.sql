@@ -4,7 +4,7 @@ CREATE TABLE Appointments (
     appoint_id INT AUTO_INCREMENT PRIMARY KEY,
     `date` DATE NOT NULL,
     `time` TIME NOT NULL, 
-    patient_id INT NOT NULL, 
+    patient_id INT UNSIGNED, 
     FOREIGN KEY (patient_id) REFERENCES Patients(patient_id) 
 ); 
 
