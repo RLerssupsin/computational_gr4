@@ -3,7 +3,7 @@ USE hospital_db;
 CREATE TABLE Prescriptions (
 prescript_id INT unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
 'date' DATE NOT NULL,
-doctor_id INT NOT NULL,
+doctor_id INT UNSIGNED NOT NULL,
 med_id INT UNSIGNED,
 patient_id INT UNSIGNED,
 
