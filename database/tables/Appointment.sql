@@ -1,31 +1,35 @@
 USE hospital_db;
 
 CREATE TABLE Appointments ( 
-    appoint_id INT PRIMARY KEY,
+    appoint_id INT AUTO_INCREMENT PRIMARY KEY,
     `date` DATE NOT NULL,
     `time` TIME NOT NULL, 
     patient_id INT NOT NULL, 
     FOREIGN KEY (patient_id) REFERENCES Patients(patient_id) 
 ); 
-INSERT INTO Appointments (appoint_id, `date`, `time`, patient_id) VALUES
-(1,  CURDATE() + INTERVAL 7 DAY,  '09:30:00', 1),
-(2,  CURDATE() + INTERVAL 8 DAY,  '10:00:00', 2),
-(3,  CURDATE() + INTERVAL 9 DAY,  '10:30:00', 3),
-(4,  CURDATE() + INTERVAL 10 DAY, '11:00:00', 4),
-(5,  CURDATE() + INTERVAL 11 DAY, '11:30:00', 5),
-(6,  CURDATE() + INTERVAL 12 DAY, '09:30:00', 6),
-(7,  CURDATE() + INTERVAL 13 DAY, '10:00:00', 7),
-(8,  CURDATE() + INTERVAL 14 DAY, '10:30:00', 8),
-(9,  CURDATE() + INTERVAL 15 DAY, '11:00:00', 9),
-(10, CURDATE() + INTERVAL 16 DAY, '11:30:00', 10),
-(11, CURDATE() + INTERVAL 17 DAY, '09:30:00', 11),
-(12, CURDATE() + INTERVAL 18 DAY, '10:00:00', 12),
-(13, CURDATE() + INTERVAL 19 DAY, '10:30:00', 13),
-(14, CURDATE() + INTERVAL 20 DAY, '11:00:00', 14),
-(15, CURDATE() + INTERVAL 21 DAY, '11:30:00', 15),
-(16, CURDATE() + INTERVAL 22 DAY, '09:30:00', 16),
-(17, CURDATE() + INTERVAL 23 DAY, '10:00:00', 17),
-(18, CURDATE() + INTERVAL 24 DAY, '10:30:00', 18),
-(19, CURDATE() + INTERVAL 25 DAY, '11:00:00', 19),
-(20, CURDATE() + INTERVAL 26 DAY, '11:30:00', 20);
+
+DELIMITER //
+
+CREATE PROCEDURE insert_random_appointments()
+BEGIN
+    DECLARE v_count INT DEFAULT 0;
+
+    WHILE v_count < 600 DO
+        INSERT INTO appointments (`date`, `time`, patient_id)
+        SELECT
+            DATE_ADD(CURDATE(), INTERVAL FLOOR(RAND() * 365) DAY),
+            SEC_TO_TIME(9 * 3600 + FLOOR(RAND() * 32) * 900),
+            patient_id
+        FROM Patients
+        ORDER BY RAND()
+        LIMIT 1;
+
+        SET v_count = v_count + 1;
+    END WHILE;
+END //
+
+DELIMITER ;
+
+CALL insert_random_appointments();
+
 
