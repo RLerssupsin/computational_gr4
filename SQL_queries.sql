@@ -2,7 +2,7 @@ SQL Qeuries for Data Extraction:
 
 1. -- Print a list of all doctors from a particular hospital
     
-       SELECT d. doctor_id, d.name FROM DOCTORS
+       SELECT d.doctor_id, d.name FROM DOCTORS
        WHERE hospital_id = ? 
 
 2.  -- Print a list of all prescriptions for a particular patient, ordered by the prescription date
