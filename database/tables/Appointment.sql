@@ -15,7 +15,7 @@ BEGIN
     DECLARE v_count INT DEFAULT 0;
 
     WHILE v_count < 600 DO
-        INSERT INTO appointments (`date`, `time`, patient_id)
+        INSERT INTO Appointments (`date`, `time`, patient_id)
         SELECT
             DATE_ADD(CURDATE(), INTERVAL FLOOR(RAND() * 365) DAY),
             SEC_TO_TIME(9 * 3600 + FLOOR(RAND() * 32) * 900),
