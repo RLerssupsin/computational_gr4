@@ -2,7 +2,7 @@ USE hospital_db;
 
 CREATE TABLE Disease (
     disease_id INT PRIMARY KEY, 
-    name VACHAR (255) NOT NULL, 
+    name VARCHAR (255) NOT NULL, 
     med_id INT UNSIGNED, 
     doctor_id INT,
     FOREIGN KEY (med_id) REFERENCES Medications(med_id),
