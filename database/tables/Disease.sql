@@ -4,7 +4,7 @@ CREATE TABLE Disease (
     disease_id INT PRIMARY KEY, 
     name VARCHAR (255) NOT NULL, 
     med_id INT UNSIGNED, 
-    doctor_id INT,
+    doctor_id INT UNSIGNED,
     FOREIGN KEY (med_id) REFERENCES Medications(med_id),
     FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)
 ); 
