@@ -2,11 +2,10 @@ USE hospital_db;
 
 CREATE TABLE Lab_results (
 result_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-test_id INT NOT NULL,
+test_id INT UNSIGNED NOT NULL,
 patient_id INT UNSIGNED NOT NULL,
-'date' DATE,
-result VARCHAR(255),
-doctor_id UNSIGNED INT NOT NULL,
+`date` DATE,
+doctor_id INT UNSIGNED NOT NULL,
 
 CONSTRAINT fk_labresults_test
 FOREIGN KEY (test_id) REFERENCES Lab_tests(test_id),
