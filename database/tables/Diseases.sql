@@ -1,12 +1,11 @@
 USE hospital_db;
 
-CREATE TABLE Disease (
-    disease_id INT PRIMARY KEY, 
-    name VARCHAR (255) NOT NULL, 
-    med_id INT UNSIGNED, 
-    doctor_id INT UNSIGNED,
-    FOREIGN KEY (med_id) REFERENCES Medications(med_id),
-    FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)
+CREATE TABLE Diseases (
+    disease_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR (255) NOT NULL,
+    specialty VARCHAR (255), 
+    med_ref VARCHAR (255)
+    
 ); 
 
 INSERT INTO Disease (disease_id, name) VALUES
