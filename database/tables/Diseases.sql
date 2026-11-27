@@ -4,6 +4,7 @@ CREATE TABLE Diseases (
     disease_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
     name VARCHAR (255) NOT NULL,
     specialty_id INT UNSIGNED, 
+    specialty VARCHAR (255),
     treatment_guide VARCHAR (255),
     FOREIGN KEY (specialty_id) REFERENCES Specialties(specialty_id) 
         
@@ -23,6 +24,6 @@ JOIN Specialties AS sp
 SET di.specialty_id = sp.specialty_id
 WHERE di.specialty_id IS NULL; 
 
-ALTER TABLE Diseases DROP COLUMN specialty;
+
 
 
