@@ -18,7 +18,7 @@ SQL Qeuries for Data Extraction:
 
        SELECT do.doctor_id, pr.* FROM Doctors as do
        LEFT JOIN Prescriptions as pr
-       WHERE doctor_id = 25
+       WHERE doctor_id = 25;
 
 4. -- Print a table showing all prescriptions ordered by patient name alphabetically
 
