@@ -23,6 +23,6 @@ JOIN Specialties AS sp
 SET di.specialty_id = sp.specialty_id
 WHERE di.specialty_id IS NULL; 
 
-ALTER TABLE Diseases DROP COLUMN specialty;
+
 
 
