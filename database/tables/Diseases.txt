@@ -1,0 +1,61 @@
+name	specialty	med_ref_list
+Type 2 diabetes mellitus	Endocrinology and Diabetes Mellitus	Metformin,Gliclazide,Pioglitazone
+Polycystic ovary syndrome	Obstetrics and Gynaecology	Metformin,Letrozole,Clomifene
+Primary hypothyroidism	Endocrinology and Diabetes Mellitus	Levothyroxine,Liothyronine
+Graves' disease	Endocrinology and Diabetes Mellitus	Carbimazole,Propylthiouracil
+Primary hyperparathyroidism	Endocrinology and Diabetes Mellitus	Cinacalcet,Alendronic acid
+Primary hypercholesterolaemia	Endocrinology and Diabetes Mellitus	Atorvastatin,Rosuvastatin,Ezetimibe
+Familial hypercholesterolaemia	Endocrinology and Diabetes Mellitus	Atorvastatin,Rosuvastatin,Ezetimibe
+Essential hypertension	Cardiology	Amlodipine,Ramipril,Indapamide
+Stable angina	Cardiology	Amlodipine,Bisoprolol,Glyceryl trinitrate,Atorvastatin
+Vasospastic angina	Cardiology	Amlodipine,Diltiazem,Glyceryl trinitrate
+Atrial fibrillation	Cardiology	Apixaban,Bisoprolol,Diltiazem
+Heart failure with reduced ejection fraction	Cardiology	Bisoprolol,Ramipril,Spironolactone,Dapagliflozin
+Deep vein thrombosis	Haematology	Apixaban,Rivaroxaban,Warfarin
+Pulmonary embolism	Respiratory Medicine	Apixaban,Rivaroxaban,Warfarin
+Peripheral arterial disease	Vascular Surgery	Atorvastatin,Clopidogrel
+Asthma	Respiratory Medicine	Salbutamol,Tiotropium,Beclometasone
+Chronic obstructive pulmonary disease	Respiratory Medicine	Salbutamol,Tiotropium,Formoterol
+Community-acquired pneumonia	Respiratory Medicine	Amoxicillin,Doxycycline,Clarithromycin
+Acute otitis media	Otolaryngology	Amoxicillin,Clarithromycin
+Acute bacterial cystitis	Urology	Nitrofurantoin,Trimethoprim,Fosfomycin
+Benign prostatic hyperplasia	Urology	Tamsulosin,Alfuzosin,Finasteride
+Distal ureteric stone	Urology	Tamsulosin,Ibuprofen,Diclofenac
+Overactive bladder	Urology	Solifenacin,Oxybutynin,Mirabegron
+Gout	Rheumatology	Allopurinol,Febuxostat,Naproxen,Colchicine
+Rheumatoid arthritis	Rheumatology	Methotrexate,Sulfasalazine,Leflunomide,Naproxen
+Psoriatic arthritis	Rheumatology	Methotrexate,Leflunomide,Naproxen
+Ankylosing spondylitis	Rheumatology	Naproxen,Celecoxib,Adalimumab
+Knee osteoarthritis	Rheumatology	Naproxen,Diclofenac,Ibuprofen
+Postmenopausal osteoporosis	Endocrinology and Diabetes Mellitus	Alendronic acid,Risedronate,Zoledronic acid
+Glucocorticoid-induced osteoporosis	Rheumatology	Alendronic acid,Risedronate,Teriparatide
+Gastro-oesophageal reflux disease	Gastroenterology	Omeprazole,Lansoprazole,Famotidine
+Reflux oesophagitis	Gastroenterology	Omeprazole,Esomeprazole,Lansoprazole
+Helicobacter pylori-associated peptic ulcer	Gastroenterology	Amoxicillin,Omeprazole,Clarithromycin,Metronidazole
+NSAID-associated gastric ulcer	Gastroenterology	Omeprazole,Lansoprazole,Pantoprazole
+Zollinger–Ellison syndrome	Gastroenterology	Omeprazole,Pantoprazole,Lansoprazole
+Irritable bowel syndrome	Gastroenterology	Mebeverine,Hyoscine butylbromide,Peppermint oil
+Chronic constipation	Gastroenterology	Lactulose,Macrogol,Senna
+Hepatic encephalopathy	Gastroenterology	Lactulose,Rifaximin
+Crohn's disease	Gastroenterology	Methotrexate,Azathioprine,Infliximab
+Severe plaque psoriasis	Dermatology	Methotrexate,Ciclosporin,Acitretin
+Seasonal allergic rhinitis	Allergy and Immunology	Cetirizine,Loratadine,Fluticasone
+Chronic spontaneous urticaria	Allergy and Immunology	Cetirizine,Fexofenadine,Omalizumab
+Tinea pedis	Dermatology	Clotrimazole,Terbinafine,Miconazole
+Tinea corporis	Dermatology	Clotrimazole,Terbinafine,Miconazole
+Vulvovaginal candidiasis	Obstetrics and Gynaecology	Clotrimazole,Fluconazole
+Herpes labialis	Dermatology	Aciclovir,Valaciclovir
+Genital herpes	Genitourinary Medicine	Aciclovir,Valaciclovir,Famciclovir
+Herpes zoster	Infectious Diseases	Aciclovir,Valaciclovir,Famciclovir
+Primary open-angle glaucoma	Ophthalmology	Latanoprost,Travoprost,Timolol
+Ocular hypertension	Ophthalmology	Latanoprost,Travoprost,Timolol
+Migraine with aura	Neurology	Sumatriptan,Naproxen,Rizatriptan
+Cluster headache	Neurology	Sumatriptan,Zolmitriptan,Verapamil
+Focal epilepsy	Neurology	Levetiracetam,Lamotrigine,Carbamazepine
+Parkinson's disease	Neurology	Co-careldopa,Co-beneldopa,Pramipexole
+Alzheimer's disease	Geriatric Medicine	Donepezil,Rivastigmine,Galantamine,Memantine
+Major depressive disorder	Psychiatry	Sertraline,Fluoxetine,Mirtazapine
+Obsessive-compulsive disorder	Psychiatry	Sertraline,Fluoxetine,Clomipramine
+Post-traumatic stress disorder	Psychiatry	Sertraline,Paroxetine,Venlafaxine
+Schizophrenia	Psychiatry	Olanzapine,Risperidone,Aripiprazole
+Bipolar I disorder	Psychiatry	Olanzapine,Quetiapine,Lithium
