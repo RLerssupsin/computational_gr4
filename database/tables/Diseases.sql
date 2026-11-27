@@ -3,39 +3,26 @@ USE hospital_db;
 CREATE TABLE Diseases (
     disease_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
     name VARCHAR (255) NOT NULL,
-    specialty VARCHAR (255), 
-    med_ref VARCHAR (255)
-    
+    specialty_id INT UNSIGNED, 
+    treatment_guide VARCHAR (255),
+    FOREIGN KEY (specialty_id) REFERENCES Specialties(specialty_id) 
+        
 ); 
 
-INSERT INTO Disease (disease_id, name) VALUES
-(1,  'Type 2 Diabetes'),
-(2,  'Hypercholesterolaemia'),
-(3,  'Hypertension'),
-(4,  'Gastro-oesophageal Reflux Disease'),
-(5,  'Asthma'),
-(6,  'Hypothyroidism'),
-(7,  'Depression'),
-(8,  'Atrial Fibrillation'),
-(9,  'Heart Failure'),
-(10, 'Angina Pectoris'),
-(11, 'Chronic Obstructive Pulmonary Disease'),
-(12, 'Bacterial Infection'),
-(13, 'Urinary Tract Infection'),
-(14, 'Gout'),
-(15, 'Osteoporosis'),
-(16, 'Benign Prostatic Hyperplasia'),
-(17, 'Migraine'),
-(18, 'Epilepsy'),
-(19, 'Parkinson''s Disease'),
-(20, 'Alzheimer''s Disease'),
-(21, 'Rheumatoid Arthritis'),
-(22, 'Irritable Bowel Syndrome'),
-(23, 'Allergic Rhinitis'),
-(24, 'Constipation'),
-(25, 'Herpes Simplex Infection'),
-(26, 'Fungal Infection'),
-(27, 'Arthritis'),
-(28, 'Open-Angle Glaucoma'),
-(29, 'Overactive Bladder'),
-(30, 'Schizophrenia');
+LOAD DATA LOCAL INFILE 'Diseases.txt'
+INTO TABLE Diseases
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(name, specialty, treatment_guide);
+
+UPDATE Diseases AS di 
+JOIN Specialties AS sp 
+    ON sp.name = di.specialty
+SET di.specialty_id = sp.specialty_id
+WHERE di.specialty_id IS NULL; 
+
+ALTER TABLE Diseases DROP COLUMN specialty;
+
+
