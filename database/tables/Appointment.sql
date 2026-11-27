@@ -17,7 +17,7 @@ INTO TABLE Appointments
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
-(date, time, patient_id, doctor_id);
+(`date`, `time`, patient_id, doctor_id);
 
 
 
