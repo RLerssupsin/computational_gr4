@@ -4,6 +4,7 @@ CREATE TABLE Diseases (
     disease_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
     name VARCHAR (255) NOT NULL,
     specialty_id INT UNSIGNED, 
+    specialty VARCHAR (255),
     treatment_guide VARCHAR (255),
     FOREIGN KEY (specialty_id) REFERENCES Specialties(specialty_id) 
         
