@@ -4,32 +4,20 @@ CREATE TABLE Appointments (
     appoint_id INT AUTO_INCREMENT PRIMARY KEY,
     `date` DATE NOT NULL,
     `time` TIME NOT NULL, 
-    patient_id INT UNSIGNED, 
-    FOREIGN KEY (patient_id) REFERENCES Patients(patient_id) 
+    patient_id INT UNSIGNED NOT NULL, 
+    doctor_id INT UNSIGNED NOT NULL,
+    CONSTRAINT fk_appointment_patient_doctor
+        FOREIGN KEY (patient_id, doctor_id) REFERENCES Patients(patient_id, doctor_id),
+    CONSTRAINT uq_doctor_slot 
+        UNIQUE (doctor_id, `date`, `time`) 
 ); 
 
-DELIMITER //
+LOAD DATA LOCAL INFILE 'appointments.txt' 
+INTO TABLE Appointments
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(`date`, `time`, patient_id, doctor_id);
 
-CREATE PROCEDURE insert_random_appointments()
-BEGIN
-    DECLARE v_count INT DEFAULT 0;
-
-    WHILE v_count < 600 DO
-        INSERT INTO Appointments (`date`, `time`, patient_id)
-        SELECT
-            DATE_ADD(CURDATE(), INTERVAL FLOOR(RAND() * 365) DAY),
-            SEC_TO_TIME(9 * 3600 + FLOOR(RAND() * 32) * 900),
-            patient_id
-        FROM Patients
-        ORDER BY RAND()
-        LIMIT 1;
-
-        SET v_count = v_count + 1;
-    END WHILE;
-END //
-
-DELIMITER ;
-
-CALL insert_random_appointments();
 
 
