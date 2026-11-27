@@ -6,9 +6,9 @@ CREATE TABLE Appointments (
     `time` TIME NOT NULL, 
     patient_id INT UNSIGNED NOT NULL, 
     doctor_id INT UNSIGNED NOT NULL,
-    CONSTRAINT fk_appointment_patient_doctor
-        FOREIGN KEY (patient_id, doctor_id) REFERENCES Patients(patient_id, doctor_id),
-    CONSTRAINT uq_doctor_slot 
+   
+        FOREIGN KEY (patient_id) REFERENCES Patients(patient_id),
+        FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id),
         UNIQUE (doctor_id, `date`, `time`) 
 ); 
 
