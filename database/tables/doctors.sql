@@ -112,3 +112,11 @@ INSERT INTO Doctors (name, DOB, address) VALUES
 ('Dr Joshua Hartley', '1990-02-08', '3 Fishergate, Preston, PR1 2UH'),
 ('Dr Farhan Qureshi', '1971-07-09', '68 Cheetham Hill Road, Manchester, M8 8EQ'),
 ('Dr Isabel Fernandes', '1981-05-20', '11 South Street, Dorchester, DT1 1DE');
+UPDATE Doctors
+SET hospital_id = (
+    SELECT hospital_id
+    FROM Hospitals
+    ORDER BY RAND()
+    LIMIT 1
+)
+WHERE hospital_id IS NULL;
