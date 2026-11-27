@@ -26,4 +26,3 @@ FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (date, test_id, result, patient_id, doctor_id);
-
