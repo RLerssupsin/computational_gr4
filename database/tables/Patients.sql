@@ -616,3 +616,34 @@ INSERT INTO Patients (name, DOB, address) VALUES
 ('Kirsty Stewart', '1978-06-11', '115 Park Avenue, Aberdeen, AB12 3PP'),
 ('Marek Popescu', '1991-05-05', '133 Windsor Gardens, Reading, RG5 4DX'),
 ('Emeka Boateng', '1976-04-28', '47 High Street, Nottingham, NG6 2EL');
+
+DELIMITER //
+
+CREATE PROCEDURE selecting_doctor()
+BEGIN
+    WHILE EXISTS (SELECT 1 FROM Patients WHERE doctor_id IS NULL)
+          AND EXISTS (SELECT 1 FROM Doctors) DO
+
+        UPDATE Patients
+        SET doctor_id = (
+            SELECT chosen.doctor_id
+            FROM (
+                SELECT d.doctor_id
+                FROM Doctors AS d
+                LEFT JOIN Patients AS p
+                    ON d.doctor_id = p.doctor_id
+                GROUP BY d.doctor_id
+                ORDER BY COUNT(p.patient_id), RAND()
+                LIMIT 1
+            ) AS chosen
+        )
+        WHERE doctor_id IS NULL
+        ORDER BY RAND()
+        LIMIT 1;
+
+    END WHILE;
+END //
+
+DELIMITER ;
+
+CALL selecting_doctor();
