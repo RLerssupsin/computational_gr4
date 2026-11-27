@@ -7,7 +7,7 @@ SQL Qeuries for Data Extraction:
 
 2.  -- Print a list of all prescriptions for a particular patient, ordered by the prescription date
        
-        SELECT pa.patient_id, pa.patient_name, pr.* FROM Prescriptions as pr
+        SELECT pa.patient_id, pa.name, pr.* FROM Prescriptions as pr
         LEFT JOIN Patients as pa
         ON pr.patient_id = pa.patient_id
         WHERE pa.patient_id = 25
