@@ -1,16 +1,28 @@
 USE hospital_db;
 
 CREATE TABLE Lab_results (
-result_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-test_id INT UNSIGNED NOT NULL,
-patient_id INT UNSIGNED NOT NULL,
-`date` DATE,
-doctor_id INT UNSIGNED NOT NULL,
+    result_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    date DATE NOT NULL,
+    test_id INT UNSIGNED NOT NULL,
+    result VARCHAR(255) NOT NULL,
+    patient_id INT UNSIGNED NOT NULL,
+    doctor_id INT UNSIGNED NOT NULL,
 
-CONSTRAINT fk_labresults_test
-FOREIGN KEY (test_id) REFERENCES Lab_tests(test_id),
+    PRIMARY KEY (result_id),
 
-CONSTRAINT fk_Leb_results_patient_doctor
-    FOREIGN KEY (patient_id, doctor_id)
-    REFERENCES Patients (patient_id, doctor_id)
+    CONSTRAINT fk_labresults_test
+        FOREIGN KEY (test_id) REFERENCES Lab_tests(test_id),
+
+    CONSTRAINT fk_labresults_patient
+        FOREIGN KEY (patient_id) REFERENCES Patients(patient_id),
+
+    CONSTRAINT fk_labresults_doctor
+        FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)
 );
+
+LOAD DATA LOCAL INFILE 'lab_results.txt'
+INTO TABLE Lab_results
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(date, test_id, result, patient_id, doctor_id);
