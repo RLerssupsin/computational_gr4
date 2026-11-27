@@ -28,7 +28,7 @@
 This project builds a relational hospital database in MySQL. our aims were to:
 
 1. Plan an Entity Relationship Diagram (ERD) to show how the tables connect and to visualise the overall database(hospital_db)
-2. Create tables for hospitals, doctors, patients, medications, prescriptions, diseases, treatments, appointments, lab tests and lab results
+2. Create tables for hospitals, doctors, patients,specialties, medications, prescriptions, diseases, treatments, appointments, lab tests and lab results
 3. Fill the tables with realistic AI generated data: 40 hospitals, 100 doctors, 600 patients, 30 medications and 500 prescriptions from the past two years
 4. Link the tables with primary and foreign keys, so each doctor works at one hospital and each patient is registered with one doctor
 5. Connect all the tables into one database
