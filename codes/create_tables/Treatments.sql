@@ -12,4 +12,4 @@ INSERT INTO Treatments (disease_id, med_id)
 SELECT di.disease_id, me.med_id
 FROM Diseases AS di
 JOIN Medications AS me
-    ON FIND_IN_SET(me.name, di.tx_options) > 0;
+    ON FIND_IN_SET(me.name, di.treatment_guide) > 0;
