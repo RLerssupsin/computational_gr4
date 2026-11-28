@@ -20,7 +20,7 @@ CREATE TABLE Lab_results (
         FOREIGN KEY (doctor_id) REFERENCES Doctors(doctor_id)
 );
 
-LOAD DATA LOCAL INFILE 'lab_results.txt'
+LOAD DATA LOCAL INFILE 'codes/raw_data/lab_results.txt'
 INTO TABLE Lab_results
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
