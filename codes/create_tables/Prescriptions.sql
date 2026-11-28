@@ -17,7 +17,7 @@ CREATE TABLE Prescriptions (
         FOREIGN KEY (patient_id) REFERENCES Patients(patient_id)
 );
 
-LOAD DATA LOCAL INFILE 'prescriptions.txt'
+LOAD DATA LOCAL INFILE 'codes/raw_data/prescriptions.txt'
 INTO TABLE Prescriptions
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
